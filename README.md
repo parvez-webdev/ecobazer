@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://placehold.co/1200x600/png?text=EcoBazar+Website+Demo" alt="EcoBazar Website Demo">
+  <img src="ChatGPT Image Sep 13, 2026, 12_18_31 AM.png" alt="EcoBazar Website Demo">
 </p>
 
 <h1 align="center">🛒 EcoBazar – Responsive E-Commerce Website</h1>
