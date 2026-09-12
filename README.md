@@ -1,29 +1,31 @@
-# 🛒 EcoBazar – Responsive E-Commerce Website
+<p align="center">
+  <img src="https://placehold.co/1200x600/png?text=EcoBazar+Website+Demo" alt="EcoBazar Website Demo">
+</p>
 
-A modern and responsive e-commerce website demo designed for an online grocery and organic food shopping experience.
+<h1 align="center">🛒 EcoBazar – Responsive E-Commerce Website</h1>
+
+<p align="center">
+  A modern and responsive e-commerce website demo for an online grocery and organic food shopping experience.
+</p>
+
+---
 
 ## 🌿 About The Project
 
-EcoBazar is a frontend e-commerce website project focused on creating a clean, modern, responsive, and user-friendly shopping experience.
+EcoBazar is a modern and responsive e-commerce website demo focused on clean UI, easy navigation, product presentation, and a mobile-friendly experience.
 
-The project includes a structured homepage with product sections, categories, promotional offers, featured products, customer testimonials, social media content, and a professional footer.
-
-I am developing this project progressively and will continue adding new pages and dynamic functionality as development moves forward.
+The project is currently under development, with additional pages and dynamic functionality planned for future updates.
 
 ## ✨ Features
 
-- 📱 Fully responsive and mobile-friendly layout
+- 📱 Responsive and mobile-friendly design
 - 🏠 Modern homepage and hero section
 - 🛍️ Product cards and product sections
 - 📂 Product categories
 - 🔥 Hot deals and special offers
 - ⭐ Featured and new products
-- 💬 Customer testimonial section
-- 📸 Social media / Instagram section
 - 🧭 Clean navigation
-- 📱 Desktop, tablet, and mobile responsive design
-- 🎨 Clean and modern UI
-- ⚡ User-friendly layout and browsing experience
+- 🎨 Modern and user-friendly UI
 
 ## 🛠️ Technologies Used
 
@@ -37,38 +39,25 @@ I am developing this project progressively and will continue adding new pages an
 
 **In Progress**
 
-The current version focuses on the frontend interface and responsive design.
+Current version focuses on frontend development and responsive design.
 
-Planned updates include:
+### Planned Updates
 
-- [ ] Additional website pages
+- [ ] Additional pages
 - [ ] Product details page
-- [ ] Shopping cart functionality
+- [ ] Shopping cart
 - [ ] User authentication
 - [ ] Dynamic product management
 - [ ] Database integration
 - [ ] Backend functionality
 - [ ] Laravel integration
 
-## 🎯 Project Goals
-
-The main goal of this project is to build a complete, practical, and modern e-commerce website while improving my frontend and full-stack web development skills.
-
-## 📱 Responsive Design
-
-EcoBazar is designed to provide a consistent experience across:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile devices
-
 ## 🔗 Project Links
 
 **Live Demo:** Coming Soon
 
 **GitHub Repository:**  
-Add your GitHub repository link here.
+Add your repository link here.
 
 ## 👨‍💻 Developer
 
@@ -76,4 +65,4 @@ Add your GitHub repository link here.
 
 Full Stack Web Developer
 
-**Skills:** PHP • Laravel • MySQL • JavaScript • HTML • CSS • Bootstrap • jQuery
+PHP • Laravel • MySQL • JavaScript • HTML • CSS • Bootstrap • jQuery
