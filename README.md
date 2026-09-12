@@ -57,7 +57,7 @@ Current version focuses on frontend development and responsive design.
 **Live Demo: https://parvez-webdev.github.io/ecobazer/
 
 **GitHub Repository:**  
-Add your repository link here.
+https://parvez-webdev.github.io/ecobazer/
 
 ## 👨‍💻 Developer
 
