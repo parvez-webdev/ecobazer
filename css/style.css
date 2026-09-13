@@ -1042,10 +1042,8 @@ main .follow-us .img  a iconify-icon{
 	padding: 14px 20px;
 	height: 52px;
 	background: var(--gray-scale-white);
-	position: relative;
 }
 #banner-1 .Email button{
-	position: absolute;
 	border: none;
 	border-radius: 0 43px 43px 0;
 	padding: 13px 36px;

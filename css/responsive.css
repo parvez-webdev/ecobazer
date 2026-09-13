@@ -614,6 +614,7 @@
         padding: 19px 10px;
         height: 49px;
         background: var(--gray-scale-white);
+        position: relative;
     }
     #banner-1 .Email button {
         border: none;
@@ -623,6 +624,7 @@
         height: 49px;
         background: var(--branding-success);
         color: var(--gray-scale-white);
+        position: absolute;
     }
     .footer-1 {
         padding: 13px 8px 0px;
