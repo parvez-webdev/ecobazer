@@ -208,6 +208,14 @@ header .favoriteIcon li a{
 	line-height: 150%;
 	color: var(--gray-scale-white);
 }
+/* -------------------shop hero section--------------------*/
+#banner img {
+	border-radius: 10px;
+	padding-right: 45px;
+	width: 1170px;
+	height: 358px;
+	margin-top: 55px;
+}
 /*-------------------- Header lg End ------------------------*/
 #banner-1{
 	padding: 50px 0;
