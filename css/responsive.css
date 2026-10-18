@@ -1,5 +1,5 @@
-@media Screen and (min-width: 360px) and (max-width: 991px) {
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@media screen and (min-width: 360px) and (max-width: 991px){
     :root {
         --gren-gray-scale-9₀₀: #₀₀₂₆₀₃;
         --gren-gray-scale-8₀₀: #₁₇₃b₁a;
@@ -31,44 +31,15 @@
         --second-family: "Segoe Script", sans-serif;
         --third-family: "Dancing Script", sans-serif;
     }
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        outline: 0;
-    }
-    ul,ol{
-        list-style-type: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    .cotainer{
-        width: 1170px;
-        margin: auto;
-    }
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    iconify-icon {
-        vertical-align: middle;
-    }
-    h1,h2,h3,h4,h5,h6,p,ol,ul,address, select{
-        margin: 0;
-        padding: 0;
-    }
-    body{
-        font-family: var(--font-family);
-    }  
     header .favoriteIcon li a {
-        display: inline-block;
+        display: block;
         padding: 0px 7px;
         border: none;
     }
     .mobileHeader .menu{
         border: none;
         background: transparent;
+        padding-left: 10px;
     }
     .cartCount{
         position: relative;
@@ -90,55 +61,10 @@
         right: -4px;
         top: 7px;
     }
-    .mobileFooter{
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        z-index: 1000;
-        width: 100%;
-    }
-    .footer {
-        width: 100vh;
-        height: 50px;
-        background: white;
-        border-radius: 5px;
-        border: 2px solid var(--gray-scale-gray-–-400);
-        box-shadow: 0px -1px 9px rgb(17, 16, 16);
-        position: relative;
-    }
-
-    .footer ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 100%;
-        position: relative;
-    }
-
-    .footer ul li {
-        list-style: none;
-        width: 73px;
-        height: 75px;
-        text-align: center;
-        line-height: 75px;
-        z-index: 1;
-    }
-    .footer ul li a {
-        display: inline-block;
-        color: rgb(17, 16, 16);
-        font-size: 28px;
-        z-index: 0;
-    }
-    .footer ul li a :hover{
-        transform: translateY(-20px);
-        transition: 0.3s;
-        color: var(--gray-scale-white);
-        border-radius: 50%;
-        padding: 7px 7px;
-        border: 2px solid rgb(247, 245, 245);
-        background-color: #767677;
-        z-index: 10;
+   .mobileHeader .favoriteIcon li a .bi {
+        display: block;
+        padding-right: 12px;
+        border: none;
     }
     .mobileHeader .offcanvas-body ul li {
         color: black;
@@ -194,52 +120,131 @@
         color: black;
         margin-left: 16px;
     }
+    /* Search section start */
+    #search{
+        padding: 10px 0px;
+    }
+    #search button {
+        border: none;
+        border-radius: 10px;
+        padding: 1px 11px 1px 17px;
+        font-size: 22px;
+        height: 40px;
+        background: var(--branding-success);
+        color: var(--gray-scale-white);
+        position: absolute;
+        right: 0;
+    }
+    /* Search section End */
     /* banner */
-    main #banner {
+   main .mobile-banner {
+        max-height: 300px;
         border-radius: 8px;
         background: var(--gren-gray-scale-50);
-        padding: 80px 10px;
+        padding: 19px 0px;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: 15px;
+        border-radius: 10px;
+        margin: 0px 10px;
     }
-    main #banner .welcome h1 {
-        padding-bottom: 8px;
+    main .mobile-banner .mobile h6 {
         font-family: var(--font-family);
-        font-weight: 593;
-        font-size: 32px;
-        line-height: 120%;
+        font-size: 11px;
+        color: var(--gray-scale-gray-–-900);
+        border: none;
+        border-radius: 30px;
+        background-color: #c5e6c6;
+        padding: 6px 13px;
+        margin-bottom: 10px;
+    }
+    main .mobile-banner .mobile h1 {
+        padding-bottom: 6px;
+        font-family: var(--font-family);
+        /* font-weight: 600; */
+        font-size: 18px;
         color: var(--gray-scale-gray-–-900);
     }
-    main #banner .welcome h4 {
+    main .mobile-banner .mobile h4 {
         font-family: var(--font-family);
         font-weight: 400;
-        font-size: 22px;
-        line-height: 120%;
+        font-size: 12px;
         color: var(--gray-scale-gray-–-900);
     }
-    main #banner .welcome h4 span {
+    main .mobile-banner .mobile h4 span {
         font-family: var(--font-family);
         font-weight: 400;
-        font-size: 22px;
-        line-height: 120%;
+        font-size: 10px;
         color: var(--branding-warning);
     }
-    main #banner .welcome h4 span {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 120%;
-        color: var(--branding-warning);
+    main .mobile-banner .mobile button {
+        border: none;
+        border-radius: 28px;
+        padding: 0px 17px;
+        height: 40px;
+        background: var(--branding-success);
+        color: var(--gray-scale-white);
+        margin-top: 30px;
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+    }
+    main .mobile-banner .mobile a img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
     }
     /* banner End */
+    /* TopCategory Start */
+    .TopCategory h2 {
+        font-family: var(--font-family);
+        font-weight: 601;
+        font-size: 25px;
+        line-height: 120%;
+        color: var(--gray-scale-gray-–-900);
+        text-align: center;
+    }
+    .TopCategory img {
+        display: block;
+        margin: 7px auto;
+    }
+    .TopCategory .Products-img img {
+        height: 62px;
+        border-radius: 0px;
+    }
+    .TopCategory .Products-img .productCard {
+        border: 1px solid var(--gray-scale-gray-–-100);
+        border-radius: 6px;
+        width: 155px;
+        height: 139px;
+        background: var(--gray-scale-white);
+    }
+    .TopCategory .productCard h5 {
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--gray-scale-gray-–-900);
+        padding-bottom: 2px;
+    }
+    .TopCategory .productCard p {
+        font-family: var(--font-family);
+        font-size: 10px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--gray-scale-gray-–-500);
+    }
+    .Next-btn {
+        display: none;
+    }
+    .Prev-btn {
+        display: none;
+    }
+    /* TopCategory End */
     /* featured-products */
     main .featured-products {
-        padding: 34px 0px;
+        padding: 1px 0px;
     }
     main .featured-products h2 {
         font-family: var(--font-family);
         font-weight: 600;
-        font-size: 33px;
+        font-size: 23px;
         line-height: 120%;
         color: var(--gray-scale-gray-–-900);
         text-align: center;
@@ -270,8 +275,9 @@
     main .featured-products .Products-imges .productCard h5 {
         font-family: var(--font-family);
         font-weight: 400;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 150%;
+        padding-left: 2px;
         color: var(--gray-scale-gray-–-700);
     }
     main .featured-products .Products-imges .productCard .cardicon {
@@ -286,15 +292,7 @@
         right: 0px;
         position: absolute;
     }
-    /* TopCategory  */
-    .TopCategory .Products-img .productCard {
-        border: 1px solid var(--gray-scale-gray-–-100);
-        border-radius: 6px;
-        width: 162px;
-        height: 163px;
-        background: var(--gray-scale-white);
-        margin: 5px;
-    }
+    
     /* Deals */
     main .Card img {
         max-width: 431px;
@@ -446,7 +444,7 @@
         box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
     }
     /* Deals End */
-    /* hot-deals */
+    /* hot-deals Start */
     .item {
         gap: 108px;
     }
@@ -504,7 +502,8 @@
         margin-top: 20px;
         box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
     }
-    /* hot-deals end */
+    /* hot-deals End */
+    /* Newest Products Start */
     main .newest-products{
         padding: 17px 0px;
     }
@@ -554,6 +553,7 @@
         line-height: 150%;
         color: var(--gray-scale-gray-–-700);
     }
+    /* Newest Products End */
     /* Client Testimonial Start  */
     .prev-btn {
         left: 70%;
@@ -646,7 +646,54 @@
         line-height: 150%;
         color: var(--gray-scale-gray-–-500);
     }
-}   
+}    .mobileFooter{
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        z-index: 1000;
+        width: 100%;
+    }
+    .footer {
+        width: 100vh;
+        height: 70px;
+        background: white;
+        border-radius: 5px;
+        border: 2px solid var(--gray-scale-gray-–-400);
+        box-shadow: 0px -1px 9px rgb(17, 16, 16);
+        position: relative;
+    }
+    .footer ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        position: relative;
+    }
+    .footer ul li {
+        list-style: none;
+        width: 73px;
+        height: 75px;
+        text-align: center;
+        line-height: 75px;
+        z-index: 1;
+    }
+    .footer ul li a {
+        display: inline-block;
+        color: rgb(17, 16, 16);
+        font-size: 28px;
+        z-index: 0;
+    }
+    .footer ul li a :hover{
+        transform: translateY(-20px);
+        transition: 0.3s;
+        color: var(--gray-scale-white);
+        border-radius: 50%;
+        padding: 7px 7px;
+        border: 2px solid rgb(247, 245, 245);
+        background-color: #767677;
+        z-index: 10;
+    }
 
 
 
