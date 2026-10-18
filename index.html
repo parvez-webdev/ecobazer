@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="preload" as="image" href="./imges/logo1.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="shortcut icon" href="./imges/logo1.png" type="image/x-icon">
@@ -15,8 +17,17 @@
     <meta property="og:image" content="https://parvez-webdev.github.io/ecobazer/EcoBazar.png">
     <meta property="og:url" content="https://parvez-webdev.github.io/ecobazer/">
     <title>EcoBazer</title>
-<head>   
+</head>   
 <body>
+    <!-- preloader start -->
+    <div id="preloader">
+        <div class="pre-box">
+            <img src="./imges/logo1.png" alt="EcoBazar" width="70">
+            <h1 class="pre-name">EcoBazar</h1>
+            <div class="pre-line"><span></span></div>
+        </div>
+    </div>
+    <!-- preloader end -->
     <header>
         <!-- Header lg start -->
             <div class="headerTop">
@@ -66,19 +77,19 @@
                             </form>
                         </div>
                         <div class="col-lg-3 text-lg-end">
-                           <ul class="favoriteIcon">
+                            <ul class="favoriteIcon d-flex align-items-center justify-content-center">
                                 <li>
                                     <a href="#">
                                         <iconify-icon icon="majesticons:heart-line"></iconify-icon>
                                     </a>
                                     <a href="#" class="cartIcon align-items-center text-start">
-                                        <div class="cartCount">
-                                            <iconify-icon icon="lets-icons:bag"></iconify-icon>
+                                        <div class="cartCount d-flex align-items-center">
+                                            <i class="bi bi-cart"></i>
                                             <div class="count">2</div>
-                                        </div>
-                                        <div class="price">
-                                            <p>Shopping cart:</p>
-                                            <h4>$57.00</h4>
+                                            <div class="price">
+                                                <p>Shopping cart:</p>
+                                                <h4>$57.00</h4>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
@@ -136,15 +147,12 @@
                         <div class="col-5">
                             <a href="#"><img src="./imges/img.png" class="img-fluid" alt=""></a>
                         </div>
-                        <div class="col">
+                        <div class="col justify-content-end d-flex">
                             <ul class="favoriteIcon">
                                 <li>
-                                    <a href="#"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">
-                                       <iconify-icon icon="jam:search"></iconify-icon>
-                                    </a>
                                     <a href="#"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" class="cartIcon align-items-center text-start">
                                         <div class="cartCount">
-                                            <iconify-icon icon="lets-icons:bag"></iconify-icon>
+                                            <i class="bi bi-cart"></i>
                                             <div class="count">2</div>
                                         </div>
                                     </a>   
@@ -180,21 +188,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- search  -->
-                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <div class="searchItems align-items-center d-flex">
-                                    <form>
-                                        <input type="search" placeholder="search">
-                                        <button class="search">search</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                         <!-- bag -->
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
@@ -228,53 +221,38 @@
                     </div>
                 </div>
             </div>
-            <div class="mobileFooter d-lg-none d-md-block">
-                <div class="contaner">
-                    <div class="row align-items-center">
-                        <div class="footer ">
-                            <ul>
-                                <li class="list active">
-                                    <a href="./index.html">
-                                        <iconify-icon icon="ion:home"></iconify-icon>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                       <iconify-icon icon="majesticons:heart-line"></iconify-icon>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="./singn/singn.html">
-                                        <iconify-icon icon="iconamoon:profile-fill"></iconify-icon>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <iconify-icon icon="mdi:cart-outline"></iconify-icon>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                       <iconify-icon icon="material-symbols:percent-discount-outline"></iconify-icon>
-                                    </a>
-                                </li>
-                                <div class="indicator"></div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         <!-- Header mobile End -->
     </header>
     <main>
-        <section id="banner">
-            <div class="container">                 
+        <!-- search start -->
+        <section id="search" class="d-lg-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for products...">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <iconify-icon icon="heroicons:magnifying-glass-20-solid"></iconify-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- search end -->
+        <section id="banner" class="d-none d-lg-block">
+            <div class="container">          
                 <div class="swiper welcome">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide d-flex align-items-center"> 
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <h6>Welcome to shopery</h6>
+                                    <h6>Welcome to Ecobazer</h6>
                                     <h1>
                                         Fresh & Healthy
                                         Organic Food
@@ -293,7 +271,7 @@
                         <div class="swiper-slide d-flex align-items-center">  
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <h6>Welcome to shopery</h6>
+                                    <h6>Welcome to Ecobazer</h6>
                                     <h1>
                                         Fresh & Healthy
                                         Organic Food
@@ -312,7 +290,7 @@
                         <div class="swiper-slide d-flex align-items-center">  
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <h6>Welcome to shopery</h6>
+                                    <h6>Welcome to Ecobazer</h6>
                                     <h1>
                                         Fresh & Healthy
                                         Organic Food
@@ -332,6 +310,179 @@
                 </div>
             </div>
         </section>
+        <!-- mobile banner start -->
+        <section class="mobile-banner d-lg-none">
+            <div class="container">
+                <div class="swiper mobile">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide d-flex align-items-center"> 
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>Welcome to Ecobazer</h6>
+                                    <h1>
+                                        Fresh & Healthy
+                                        <br>Organic Food
+                                    </h1>
+                                    <h4>Sale up to <span>30% OFF</span></h4>
+                                    <button type="submit">Shop Now
+                                        <iconify-icon icon="heroicons:arrow-right-20-solid"></iconify-icon>
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./imges/banner.png" alt="Mobile Banner"></a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="swiper-slide d-flex align-items-center"> 
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>Welcome to Ecobazer</h6>
+                                    <h1>
+                                        Fresh & Healthy
+                                        <br>Organic Food
+                                    </h1>
+                                    <h4>Sale up to <span>30% OFF</span></h4>
+                                    <button type="submit">Shop Now
+                                        <iconify-icon icon="heroicons:arrow-right-20-solid"></iconify-icon>
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./imges/banner.png" alt="Mobile Banner"></a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="swiper-slide d-flex align-items-center"> 
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>Welcome to Ecobazer</h6>
+                                    <h1>
+                                        Fresh & Healthy
+                                        <br>Organic Food
+                                    </h1>
+                                    <h4>Sale up to <span>30% OFF</span></h4>
+                                    <button type="submit">Shop Now
+                                        <iconify-icon icon="heroicons:arrow-right-20-solid"></iconify-icon>
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./imges/banner.png" alt="Mobile Banner"></a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- mobile banner End -->
+        <!-- Support Start -->
+        <section class="sup-content d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="support d-flex align-items-center justify-content-between">
+                        <div class="col-lg-3">
+                            <div class="support-item d-flex align-items-center justify-content-center">
+                                <a href="#">
+                                    <i class="bi bi-truck"></i>
+                                </a>
+                                <div class="text">
+                                    <h5>Free Shipping</h5>
+                                    <p>On all orders over $100</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="support-item d-flex align-items-center justify-content-center">
+                                <a href="#">
+                                    <i class="bi bi-headset"></i>
+                                </a>
+                                <div class="text">
+                                    <h5>24/7 Support</h5>
+                                    <p>Customer support anytime</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="support-item d-flex align-items-center justify-content-center">
+                                <a href="#">
+                                    <i class="bi bi-credit-card"></i>
+                                </a>
+                                <div class="text">
+                                    <h5>Secure Payment</h5>
+                                    <p>100% secure payment</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="support-item d-flex align-items-center justify-content-center">
+                                <a href="#">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                </a>
+                                <div class="text">
+                                    <h5>Easy Returns</h5>
+                                    <p>Simple return process</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Support End  -->
+        <!-- Top Category Start -->
+        <section class="TopCategory">
+            <div class="container">
+                <h2>Top Category</h2>
+                <img src="./imges/Line.png" alt="">
+                <iconify-icon class="Prev-btn" icon="solar:arrow-left-outline" width="24" height="24"></iconify-icon>
+                <iconify-icon class="Next-btn" icon="solar:arrow-right-outline" width="24" height="24"></iconify-icon>
+                <div class="Products-img">
+                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img src="./imges/Group.png" alt="">
+                            <h5>Vegetables</h5>
+                            <p>165 Products</p>
+                        </a> 
+                    </div>
+                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img src="./imges/fruits 1.png" alt="">
+                            <h5>Fresh Fruit</h5>
+                            <p>137 Products</p>
+                        </a> 
+                    </div>
+                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img src="./imges/Group1.png" alt="">
+                            <h5>River Fish</h5>
+                            <p>34 Products</p>
+                        </a> 
+                    </div>
+                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img src="./imges/meat 1.png" alt="meat">
+                            <h5>Meat</h5>
+                            <p>165 Products</p>
+                        </a> 
+                    </div>
+                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img src="./imges/soft-drink 1.png" alt="">
+                            <h5>Water and Drinks</h5>
+                            <p>48 Products</p>
+                        </a> 
+                    </div>
+                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img src="./imges/snacks 1.png" alt="">
+                            <h5>Snacks</h5>
+                            <p>165 Products</p>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- Top Category End -->
         <!-- Featured Products Start -->
         <section class="featured-products">
             <div class="container">
@@ -1868,59 +2019,7 @@
             </div>
         </section>     
         <!-- Hot Deals End -->
-        <!-- Top Category Start -->
-        <section class="TopCategory">
-            <div class="container">
-                <h2>Top Category</h2>
-                <img src="./imges/Line.png" alt="">
-                <iconify-icon class="Prev-btn" icon="solar:arrow-left-outline" width="24" height="24"></iconify-icon>
-                <iconify-icon class="Next-btn" icon="solar:arrow-right-outline" width="24" height="24"></iconify-icon>
-                <div class="Products-img">
-                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
-                        <a href="#">
-                            <img src="./imges/Group.png" alt="">
-                            <h5>Vegetables</h5>
-                            <p>165 Products</p>
-                        </a> 
-                    </div>
-                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
-                        <a href="#">
-                            <img src="./imges/fruits 1.png" alt="">
-                            <h5>Fresh Fruit</h5>
-                            <p>137 Products</p>
-                        </a> 
-                    </div>
-                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
-                        <a href="#">
-                            <img src="./imges/Group1.png" alt="">
-                            <h5>River Fish</h5>
-                            <p>34 Products</p>
-                        </a> 
-                    </div>
-                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
-                        <a href="#">
-                            <img src="./imges/meat 1.png" alt="meat">
-                            <h5>Meat</h5>
-                            <p>165 Products</p>
-                        </a> 
-                    </div>
-                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
-                        <a href="#">
-                            <img src="./imges/soft-drink 1.png" alt="">
-                            <h5>Water and Drinks</h5>
-                            <p>48 Products</p>
-                        </a> 
-                    </div>
-                    <div class="productCard col-lg-2 col-md-6 col-sm-12">
-                        <a href="#">
-                            <img src="./imges/snacks 1.png" alt="">
-                            <h5>Snacks</h5>
-                            <p>165 Products</p>
-                        </a> 
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <section class="Deals">
             <div class="container">
                 <div class="row d-flex">
@@ -1954,7 +2053,7 @@
                 </div>
             </div>
         </section>
-        <!-- Top Category End -->
+       
         <!-- Newest Products Start -->
         <section class="newest-products">
             <div class="container">
@@ -1962,7 +2061,7 @@
                     <h2>Newest Products</h2>
                     <h4>View All
                         <iconify-icon icon="solar:arrow-right-outline" width="24" height="24"></iconify-icon>
-                    </h5>
+                    </h4>
                 </div>
                 
                 <img src="./imges/Line.png" alt="">
@@ -3439,54 +3538,55 @@
         <section class="follow-us">
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-center">
-                    <h2>Follow Us on Instagram</h2>
-                        <div class="img col-lg-2">
-                            <img class="img-fluid" src="./imges/Instagram Post.png" alt="">
-                            <div class="instagram">
-                                <a href="#">
-                                    <iconify-icon icon="uil:instagram"></iconify-icon>
-                                </a>
-                            </div>
+                    <h2>
+                        Follow Us on Instagram
+                    </h2>
+                    <div class="img col-lg-2">
+                        <img class="img-fluid" src="./imges/Instagram Post.png" alt="">
+                        <div class="instagram">
+                            <a href="#">
+                                <iconify-icon icon="uil:instagram"></iconify-icon>
+                            </a>
                         </div>
-                        <div class="img col-lg-2">
-                            <img class="img-fluid" src="./imges/Instagram Post2.png" alt="">
-                            <div class="instagram">
-                                <a href="#">
-                                    <iconify-icon icon="uil:instagram"></iconify-icon>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="img col-lg-2">
+                        <img class="img-fluid" src="./imges/Instagram Post2.png" alt="">
+                        <div class="instagram">
+                            <a href="#">
+                                <iconify-icon icon="uil:instagram"></iconify-icon>
+                            </a>
                         </div>
-                        <div class="img col-lg-2">
-                            <img class="img-fluid" src="./imges/Instagram Post3.png" alt="">
-                            <div class="instagram">
-                                <a href="#">
-                                    <iconify-icon icon="uil:instagram"></iconify-icon>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="img col-lg-2">
+                        <img class="img-fluid" src="./imges/Instagram Post3.png" alt="">
+                        <div class="instagram">
+                            <a href="#">
+                                <iconify-icon icon="uil:instagram"></iconify-icon>
+                            </a>
                         </div>
-                        <div class="img col-lg-2">
-                            <img class="img-fluid" src="./imges/Instagram Post4.png" alt="">
-                            <div class="instagram">
-                                <a href="#">
-                                    <iconify-icon icon="uil:instagram"></iconify-icon>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="img col-lg-2">
+                        <img class="img-fluid" src="./imges/Instagram Post4.png" alt="">
+                        <div class="instagram">
+                            <a href="#">
+                                <iconify-icon icon="uil:instagram"></iconify-icon>
+                            </a>
                         </div>
-                        <div class="img col-lg-2">
-                            <img class="img-fluid" src="./imges/Instagram Post5.png" alt="">
-                            <div class="instagram">
-                                <a href="#">
-                                    <iconify-icon icon="uil:instagram"></iconify-icon>
-                                </a>
-                            </div>
-                        </div>   
-                        <div class="img col-lg-2">
-                            <img class="img-fluid" src="./imges/Instagram Post6.png" alt="">
-                            <div class="instagram">
-                                <a href="#">
-                                    <iconify-icon icon="uil:instagram"></iconify-icon>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="img col-lg-2">
+                        <img class="img-fluid" src="./imges/Instagram Post5.png" alt="">
+                        <div class="instagram">
+                            <a href="#">
+                                <iconify-icon icon="uil:instagram"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>   
+                    <div class="img col-lg-2">
+                        <img class="img-fluid" src="./imges/Instagram Post6.png" alt="">
+                        <div class="instagram">
+                            <a href="#">
+                                <iconify-icon icon="uil:instagram"></iconify-icon>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -3523,7 +3623,7 @@
         <div class="container">
             <div class="row pb-lg-5 align-items-center justify-content-between">
                 <div class="col-lg-3">
-                    <h4>About Shopery</h4>
+                    <h4>About Ecobazer</h4>
                     <p>Morbi cursus porttitor enim lobortis molestie. 
                         Duis gravida turpis dui, 
                         eget bibendum magna congue nec.
@@ -3588,6 +3688,42 @@
                         <img src="./imges/Mastercard.png" alt="Mastercard">
                         <img src="./imges/Cart.png" alt="Cart">
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobileFooter d-lg-none d-md-block">
+        <div class="contaner">
+            <div class="row align-items-center">
+                <div class="footer ">
+                    <ul>
+                        <li class="list active">
+                            <a href="./index.html">
+                                <iconify-icon icon="ion:home"></iconify-icon>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <iconify-icon icon="majesticons:heart-line"></iconify-icon>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="./singn/singn.html">
+                                <iconify-icon icon="iconamoon:profile-fill"></iconify-icon>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <iconify-icon icon="mdi:cart-outline"></iconify-icon>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <iconify-icon icon="material-symbols:percent-discount-outline"></iconify-icon>
+                            </a>
+                        </li>
+                        <div class="indicator"></div>
+                    </ul>
                 </div>
             </div>
         </div>

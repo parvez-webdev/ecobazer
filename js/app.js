@@ -1,3 +1,10 @@
+const pre = document.getElementById("preloader");
+const hidePre = () => pre.classList.add("hide");
+
+window.addEventListener("load", () => setTimeout(hidePre, 1500));
+setTimeout(hidePre, 5000);
+
+// Slick Slider
 $('.Products-imges').slick({
   infinite: true,
   slidesToShow: 5,
@@ -22,7 +29,12 @@ $('.Products-img').slick({
   centerMode: false,
   variableWidth: true,
 })
+// Swiper Slider
 var swiper = new Swiper(".welcome", {
+  loop: true,
+  autoplay: 2000,
+});
+var swiper = new Swiper(".mobile", {
   loop: true,
   autoplay: 2000,
 });
@@ -34,6 +46,7 @@ $('.Prev-btn').click(function () {
 $('.Next-btn').click(function () {
   $('.Products-img').slick('slickNext');
 });
+
 $('.client').slick({
   infinite: true,
   slidesToShow: 3,
@@ -49,3 +62,4 @@ $('.prev-btn').click(function () {
 $('.next-btn').click(function () {
   $('.client').slick('slickNext');
 });
+// preloader
